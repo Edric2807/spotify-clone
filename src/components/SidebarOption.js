@@ -1,23 +1,22 @@
-import React from 'react'
+import React from "react";
 import styled from 'styled-components'
 
 function SidebarOption({ option, Icon }) {
-    return (
-        <SidebarOptionContainer>
-            {Icon && <Icon />}
-            {Icon ? <h4>{option}</h4> : <p>{option}</p>}
-        </SidebarOptionContainer>
-    )
+  return (
+    <SidebarOptionContainer>
+      {Icon && <Icon />}
+      {Icon ? <h4>{option}</h4> : <p>{option} </p>}
+    </SidebarOptionContainer>
+  );
 }
-
-export default SidebarOption;
 
 const SidebarOptionContainer = styled.div`
     display: flex;
-    color: grey;
-    height: 40px;
     cursor: pointer;
-    transition: 250ms color ease-in;
+    align-items: center;
+    height: 40px;
+    color: grey;
+    transition: 200ms color ease-in;
 
     :hover {
         color: white;
@@ -34,3 +33,5 @@ const SidebarOptionContainer = styled.div`
         font-size: 14px;
     }
 `;
+
+export default SidebarOption;

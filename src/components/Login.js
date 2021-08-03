@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { loginUrl } from "../spotify";
+import { accessUrl } from "../spotify";
 
 function Login() {
     return (
@@ -10,13 +10,12 @@ function Login() {
                 src="https://cdn.dribbble.com/users/441326/screenshots/3165191/spotify-gif---oliver-keane.gif" 
                 alt="spotify logo" 
             />
-            <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
+            <a href={accessUrl}>LOGIN WITH SPOTIFY</a>
 
         </LoginContainer>
     )
 }
 
-export default Login;
 const LoginContainer = styled.div`
     display: grid;
     place-items: center;
@@ -39,3 +38,5 @@ const LoginContainer = styled.div`
         margin-bottom: 250px;
     }
 `;
+
+export default Login;

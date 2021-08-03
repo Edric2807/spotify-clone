@@ -5,10 +5,10 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import LibraryMusicOutlinedIcon from '@material-ui/icons/LibraryMusicOutlined';
 import { useStateValue } from '../StateProvider';
-
+import { getTokenFromResponse } from "../spotify";
 
 function Sidebar() {
-    const [{ playlists }] = useStateValue();
+    const [{ playlists }, dispatch] = useStateValue();
     console.log(`THIS IS PLAYLIST 👉 ${playlists}`);
     return (
         <SidebarContainer>
@@ -25,12 +25,20 @@ function Sidebar() {
             <hr />
 
             {playlists?.items?.map((playlist) => (
-                <SidebarOption option={playlist.name} />
+                    <SidebarOption option={playlist.name} />
             ))}
         </SidebarContainer> 
     );
 }
 
+
+//         <SidebarOption option={playlist.name} />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default Sidebar;
 export default Sidebar;
 
 const SidebarContainer = styled.div`
