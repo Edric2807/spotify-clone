@@ -1,8 +1,7 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-
 const firebaseConfig = {
-    apiKey: "AIzaSyDoNXKncTNkPqzuEOTE4x2qVuWpiF4ufVU",
+    apiKey: "API KEY ¯\_(ツ)_/¯",
     authDomain: "ipotify.firebaseapp.com",
     projectId: "ipotify",
     storageBucket: "ipotify.appspot.com",
